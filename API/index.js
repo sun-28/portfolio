@@ -1,8 +1,8 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const Message = require("./Message");
+const cors = require("cors");
 require("dotenv").config();
-require("cors");
 
 const app = express();
 app.use(express.json());
@@ -30,10 +30,11 @@ app.post("/newMsg", async (req, res) => {
     res.status(500).send("Internal Server Error");
   }
 });
-
-mongoose.connect(process.env.MONGO_URI, () => {
-  console.log("DB connected");
-});
+mongoose.connect(process.env.MONGO_URI).then(()=>{
+    console.log("Connected to MongoDB");
+}).catch((err)=>{
+    console.log("Error connecting to MongoDB", err);
+})
 
 app.listen(3000, () => {
   console.log("Server is running on port 3000");
