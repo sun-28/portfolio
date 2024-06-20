@@ -38,7 +38,7 @@ const Contact: React.FC = () => {
     const data = new FormData(e.currentTarget);
 
     try {
-      const response = await axios.post(apiBaseUrl, data);
+      const response = await axios.post("https://portfolio.adaptable.app/newMsg", data);
       console.log(response);
       toast.success(toastMessages.successEmailSent.en);
     } catch (error) {
