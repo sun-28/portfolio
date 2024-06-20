@@ -461,13 +461,13 @@ export const contactData = {
 
 export const toastMessages = {
   loadingProject: {
-    en: "🦄 The live demo will open shortly. Starting servers...",
+    en: "The live demo will open shortly. Starting servers...",
   },
   successEmailSent: {
-    en: "🦄 Thank you for your email. I will get back to you as soon as possible",
+    en: "Thank you for your email. I will get back to you as soon as possible",
   },
   failedEmailSent: {
-    en: "🦄 Unfortunately the sending of your email did not work. Please try again later",
+    en: "Unfortunately the sending of your email did not work. Please try again later",
   },
   failedValidationName: {
     en: "Please fill in your name",
