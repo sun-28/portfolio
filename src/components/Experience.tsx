@@ -51,7 +51,7 @@ const Experience: React.FC = () => {
             className="vertical-timeline-element--work"
             contentStyle={{ background: "#0c2019", color: "#51f0b3" }}
             contentArrowStyle={{ borderRight: "7px solid  #51f0b3" }}
-            date="June 2025 - August 2025 (Upcoming)"
+            date="Summer 2025 (Upcoming)"
             dateClassName="work-date"
             iconStyle={{
               background: "#ffff",
