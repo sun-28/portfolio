@@ -5,7 +5,7 @@ import dockericon from "../../assets/icons/dockericon.png";
 import jiraicon from "../../assets/icons/jiraicon.svg";
 import firebaseicon from "../../assets/icons/firebaseicon.png";
 import flaskicon from "../../assets/icons/flaskicon.png";
-import AWSicon from "../../assets/icons/AWSicon.webp";
+import AWSicon from "../../assets/icons/aws.png";
 import cssicon from "../../assets/icons/cssicon.svg";
 import javascripticon from "../../assets/icons/javascripticon.svg";
 import typescripticon from "../../assets/icons/typescripticon.svg";
@@ -16,16 +16,17 @@ import tailwindcssicon from "../../assets/icons/tailwindicon.svg";
 import mongodbicon from "../../assets/icons/mongoicon.svg";
 import cppicon from "../../assets/icons/cppicon.svg";
 import pythonicon from "../../assets/icons/pythonicon.webp";
-import expressicon from "../../assets/icons/expressicon.svg";
 import websocketicon from "../../assets/icons/websocketsicon.png";
 import redisicon from "../../assets/icons/redisicon.webp";
 import solidityicon from "../../assets/icons/solidityicon.svg";
 import webrtcicon from "../../assets/icons/webrtcicon.png";
 import thusticon from "../../assets/icons/thusticon.jpeg";
+import scoreicon from "../../assets/icons/score.png";
 import linkfluenceicon from "../../assets/icons/linkfluenceicon.jpg";
 import jalsamadhanicon from "../../assets/icons/jalsamadhanicon.jpg";
 import restapiicon from "../../assets/icons/restapiicon.png";
 import rendericon from "../../assets/icons/rendericon.svg";
+import passporticon from "../../assets/icons/passportjs.png";
 import jwticon from "../../assets/icons/jwticon.svg";
 import reactnativeicon from "../../assets/icons/reactnativeicon.svg";
 import streamdevicon from "../../assets/icons/streamdevicon.jpg";
@@ -43,9 +44,9 @@ export const headerIntroData = {
   title: {
     en: "Hi, I'm Sunpreet Singh",
   },
-  subtitle: "Full Stack Developer ",
+  subtitle: "Software Engineer",
   description: {
-    en: "Passionate about innovation and dedicated to crafting impactful digital solutions. As a Full Stack Developer, I thrive on collaborating in transformative projects that shape the future of technology. Let's build the future together!",
+    en: "I'm a pre-final year CSE student who loves building cool stuff and making things run faster. I enjoy solving tricky problems, automating workflows, and picking up new tech along the way. When I'm not coding, you’ll find me helping others, working on side projects, or just geeking out over something new.",
   },
   buttons: [
     {
@@ -68,6 +69,33 @@ export const headerIntroData = {
 } as const;
 
 export const projectsData = [
+  {
+    title: "ScoreFlow - Code Assessment Platform",
+    description_EN:
+      "Scoreflow is a online code assessment platform built with MERN, Passport.js, Docker, and AWS, featuring automated code execution, plagiarism detection, proctoring, and analytics. It leverages Docker-based compiler images for isolated multi-language execution, Bull Queues for concurrency control, and Redis-backed Passport.js authentication with Google OAuth 2.0. Deployed with Nginx, GitHub Actions (CI/CD), and AWS, it ensures a scalable, secure, and efficient coding evaluation system.",
+    technologies: [
+      { name: "ReactJs", icon: reacticon },
+      { name: "NodeJs", icon: nodejsicon },
+      { name: "Docker", icon: dockericon },
+      { name: "WebSockets", icon: websocketicon },
+      { name: "AWS", icon: AWSicon },
+      { name: "MongoDB", icon: mongodbicon },
+      { name: "Express", icon: expressiconwhite },
+      { name: "Redis", icon: redisicon },
+      { name: "PassportJs", icon: passporticon },
+    ],
+    image: scoreicon,
+    deploymenturl: "https://scoreflow.live/",
+    githuburl: "https://github.com/sun-28/ScoreFlow",
+    githubicon: FiGithub,
+    deploymenticon: FiLink,
+    colors: {
+      main: "main-btn",
+      second: "secondary-btn",
+      icon: "white",
+      projectcolor: "#FFD5BD",
+    },
+  },
   {
     title: "Thust - Deployment App",
     description_EN:
@@ -102,7 +130,7 @@ export const projectsData = [
     technologies: [
       { name: "ReactJs", icon: reacticon },
       { name: "NodeJs", icon: nodejsicon },
-      { name: "ExpressJs", icon: expressicon },
+      { name: "ExpressJs", icon: expressiconwhite },
       { name: "MongoDB", icon: mongodbicon },
       { name: "WebSockets", icon: websocketicon },
       { name: "WebRTC", icon: webrtcicon },
@@ -130,7 +158,7 @@ export const projectsData = [
     technologies: [
       { name: "ReactJs", icon: reacticon },
       { name: "NodeJs", icon: nodejsicon },
-      { name: "ExpressJs", icon: expressicon },
+      { name: "ExpressJs", icon: expressiconwhite },
       { name: "MongoDB", icon: mongodbicon },
       { name: "JWT & Bcrypt", icon: jwticon },
       { name: "RESTful APIs", icon: restapiicon },
@@ -153,7 +181,7 @@ export const projectsData = [
       "Jalsamadhan is an innovative mobile application designed to address the increasing threats of water-related disasters due to urbanization and environmental instability. The app integrates advanced technologies, crowd-sourced data, and community engagement to provide real-time insights like heat maps and streamlines disaster management processes.",
     technologies: [
       { name: "NodeJs", icon: nodejsicon },
-      { name: "ExpressJs", icon: expressicon },
+      { name: "ExpressJs", icon: expressiconwhite },
       { name: "MongoDB", icon: mongodbicon },
       { name: "JWT & Bcrypt", icon: jwticon },
       { name: "RESTful APIs", icon: restapiicon },
@@ -201,7 +229,7 @@ export const skillsDataTech = [
       {
         title: "Express",
         hash: "#Express",
-        icon: [expressicon, expressiconwhite],
+        icon: [expressiconwhite, expressiconwhite],
         color: ["#000000", "#FFFFFF"],
       },
       {
@@ -279,10 +307,10 @@ export const skillsDataDB = [
         color: "#449C45",
       },
       {
-        title: "PostgreSql",
-        hash: "#PostgreSql",
-        icon: postgresqlicon,
-        color: "#1572B6",
+        title: "Redis",
+        hash: "#Redis",
+        icon: redisicon,
+        color: "#D82C20",
       },
     ],
   },
@@ -365,8 +393,7 @@ export const experienceData = {
   paragraphs_EN: [
     {
       title: "Dhondi.ai - Full Stack Developer Intern",
-      description:
-        "",
+      description: "",
       icon: hardwareicon,
     },
     {

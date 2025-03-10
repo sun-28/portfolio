@@ -4,7 +4,7 @@ import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
-import { DHONDI, GDSC } from "./Work";
+import { DHONDI, GDSC, JPMC } from "./Work";
 import "react-vertical-timeline-component/style.min.css";
 import { motion, useScroll, useTransform } from "framer-motion";
 import "swiper/css";
@@ -51,7 +51,30 @@ const Experience: React.FC = () => {
             className="vertical-timeline-element--work"
             contentStyle={{ background: "#0c2019", color: "#51f0b3" }}
             contentArrowStyle={{ borderRight: "7px solid  #51f0b3" }}
-            date="May 2024 - present"
+            date="June 2025 - August 2025 (Upcoming)"
+            dateClassName="work-date"
+            iconStyle={{
+              background: "#ffff",
+              color: "#51f0b3",
+              cursor: "pointer",
+            }}
+            icon={<JPMC/>}
+            iconOnClick={() => {
+              window.location.href = "https://www.jpmorganchase.com/";
+            }}
+          >
+            <h3 className="vertical-timeline-element-title">
+              Software Engineer Intern
+            </h3>
+            <h4 className="vertical-timeline-element-subtitle">
+              JPMorgan Chase & Co
+            </h4>
+          </VerticalTimelineElement>
+          <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            contentStyle={{ background: "#0c2019", color: "#51f0b3" }}
+            contentArrowStyle={{ borderRight: "7px solid  #51f0b3" }}
+            date="May 2024 - July 2024"
             dateClassName="work-date"
             iconStyle={{
               background: "#ffff",
@@ -81,13 +104,11 @@ const Experience: React.FC = () => {
             }}
             icon={<GDSC />}
             iconOnClick={() => {
-              window.location.href = "https://gdsc-jiit128.tech/";
+              window.location.href = "https://gdg-jiit.com/";
             }}
           >
-            <h3 className="vertical-timeline-element-title">
-              Full Stack Developer @ Core Team
-            </h3>
-            <h4 className="vertical-timeline-element-subtitle">GDSC J128</h4>
+            <h3 className="vertical-timeline-element-title">Technical Lead</h3>
+            <h4 className="vertical-timeline-element-subtitle">GDG J128</h4>
           </VerticalTimelineElement>
         </VerticalTimeline>
       </section>
